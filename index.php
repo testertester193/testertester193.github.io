@@ -14,31 +14,7 @@ header("Refresh: 5; URL=$url");  // Refresh the webpage every 5 seconds
             <td>Timestamp</td>
             <td>Value</td>
       </tr>
-      
-<?php
-    // Connect to database
-
-   // IMPORTANT: If you are using XAMPP you will have to enter your computer IP address here, if you are using webpage enter webpage address (ie. "www.yourwebpage.com")
-    $con=mysqli_connect("10.20.24.29","root","kevin","kevin");
-       
-    // Retrieve all records and display them   
-    $result = mysqli_query($con,'SELECT * FROM sensor ORDER BY id DESC');
-      
-    // Process every record
-    
-    while($row = mysqli_fetch_array($result))
-    {      
-        echo "<tr>";
-        echo "<td>" . $row['id'] . "</td>";
-        echo "<td>" . $row['time'] . "</td>";
-        echo "<td>" . $row['value'] . "</td>";
-        echo "</tr>";
-        
-    }
-        
-    // Close the connection   
-    mysqli_close($con);
-?>
+     
     </table>
     </body>
 </html>
