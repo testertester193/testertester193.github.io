@@ -1,7 +1,3 @@
-<?php
-$url=$_SERVER['REQUEST_URI'];
-header("Refresh: 5; URL=$url");  // Refresh the webpage every 5 seconds
-?>
 <html>
 <head>
     <title>Light Sensor</title>
